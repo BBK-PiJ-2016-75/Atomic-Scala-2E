@@ -2,11 +2,11 @@
 import com.atomicscala.AtomicTest._
 
 val myClothesWasher1 = new ClothesWasher("Hotpoint")
-val myClothesWasher2 = new ClothesWasher(50)
+val myClothesWasher2 = new ClothesWasher(50.0)
 
 class ClothesWasher(val model: String, val capacity: Double) {
   def this(model: String) = {
-    this(model, 0)
+    this(model, 0.0)
   }
 
   def this(capacity: Double) = {
@@ -15,6 +15,6 @@ class ClothesWasher(val model: String, val capacity: Double) {
 }
 
 myClothesWasher1.model is "Hotpoint"
-myClothesWasher1.capacity is 0
+myClothesWasher1.capacity is 0.0
 myClothesWasher2.model is "N/A"
-myClothesWasher2.capacity is 50
+myClothesWasher2.capacity is 50.0
