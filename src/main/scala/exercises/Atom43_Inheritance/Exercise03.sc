@@ -7,7 +7,7 @@ val b = new Bicycle
 class Cycle {
   val wheels = 2
 
-  def ride:String = "Riding"
+  def ride: String = "Riding"
 }
 
 class Bicycle extends Cycle
