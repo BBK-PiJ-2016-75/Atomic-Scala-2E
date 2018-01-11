@@ -6,11 +6,11 @@ val ca = new ClassArg(19)
 class ClassArg(a: Int) {
   println(f)
 
-  def f = a * 10
+  def f: Int = a * 10
 }
 
 class Sum(args: Int*) {
-  def result = {
+  def result: Int = {
     var total = 0
     for (n <- args) total += n
     total

@@ -10,17 +10,17 @@ class Coffee(val shots: Int = 2, val decaf: Int = 0, val milk: Boolean = false,
   var result = ""
   println(shots, decaf, milk, toGo, syrup)
 
-  def getCup() =
+  def getCup(): Unit =
     if (toGo) result += "ToGoCup " else result += "HereCup "
 
-  def pourShots() =
+  def pourShots(): Unit =
     for (_ <- 0 until shots)
       if (decaf > 0) result += "decaf shot " else result += "shot "
 
-  def addMilk() =
+  def addMilk(): Unit =
     if (milk) result += "milk "
 
-  def addSyrup() =
+  def addSyrup(): Unit =
     result += syrup
 
   getCup()

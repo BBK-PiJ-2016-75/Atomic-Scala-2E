@@ -10,13 +10,14 @@ val c = new CarTrip(cities, "6/1/2012", "7/1/2012")
 
 class Trip(val origination: String, val destination: String, val startDate: String,
            val endDate: String) {
-  override def toString = "From " + origination + " to " + destination + ": " + startDate + " to " +
+  override def toString: String = "From " + origination + " to " + destination + ": " + startDate + " " +
+    "to " +
     endDate
 }
 
 class AirplaneTrip(origination: String, destination: String, startDate: String, endDate: String,
                    val movie: String) extends Trip(origination, destination, startDate, endDate) {
-  override def toString = "On a flight from " + origination + " to " + destination +
+  override def toString: String = "On a flight from " + origination + " to " + destination +
     ", we watched " + movie
 }
 

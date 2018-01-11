@@ -6,17 +6,17 @@ val cat = new Cat
 val hamster = new Hamster
 
 class Dog {
-  def bark = "Yip!"
+  def bark: String = "Yip!"
 }
 
 class Cat {
-  def meow = "Mew!"
+  def meow: String = "Mew!"
 }
 
 class Hamster {
-  def exercise = speak + " Running on wheel!"
+  def exercise: String = speak + " Running on wheel!"
 
-  def speak = "Squeak!"
+  def speak: String = "Squeak!"
 }
 
 dog.bark is "Yip!"

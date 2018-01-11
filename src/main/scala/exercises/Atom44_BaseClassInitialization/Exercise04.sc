@@ -11,7 +11,7 @@ class House(val address: String, val state: String, val zip: String) {
 
 class VacationHouse(state: String, zip: String, val startMonth: Int, val endMonth: Int)
   extends House(state, zip) {
-  override def toString = "Rented house in " + state + " for months of " + monthName(startMonth) +
+  override def toString: String = "Rented house in " + state + " for months of " + monthName(startMonth) +
     " through " + monthName(endMonth) + "."
 
   def monthName(month: Int): String = month match {
