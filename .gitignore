@@ -81,6 +81,5 @@ project/plugins/project/
 
 # End of https://www.gitignore.io/api/sbt,scala,jetbrains+all
 project/
-src/main/scala/atomicscala/
 src/main/scala/examples/
 src/main/scala/solutions/

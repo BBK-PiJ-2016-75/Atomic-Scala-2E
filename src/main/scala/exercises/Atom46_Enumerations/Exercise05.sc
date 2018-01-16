@@ -1,14 +1,9 @@
 // Exercise05.sc
 import com.atomicscala.AtomicTest._
 
-object Move extends Enumeration {
-  type Move = Value
-  val clear, X, O = Value
-}
+val grid = new Grid
 
 import Move._
-
-val grid = new Grid
 
 class Cell {
   var entry = clear
@@ -37,6 +32,11 @@ class Grid {
       cells(x)(y).set(e)
     }
   }
+}
+
+object Move extends Enumeration {
+  type Move = Value
+  val clear, X, O = Value
 }
 
 grid.play(Move.X, 1, 1) is "successful move"
