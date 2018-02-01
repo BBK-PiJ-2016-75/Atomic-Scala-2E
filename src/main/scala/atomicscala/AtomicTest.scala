@@ -18,9 +18,6 @@ class AtomicTest[T](val target: T) {
     expected.replaceAll("\r\n", "\n") == str
   }
 
-  def str: String = // Safely convert to a String
-    Option(target).getOrElse("").toString
-
   def is[E](expected: E): Unit = tst(expected) {
     expected == target
   }
@@ -41,6 +38,9 @@ class AtomicTest[T](val target: T) {
     str.startsWith(
       exp.replaceAll("\r\n", "\n"))
   }
+
+  def str: String = // Safely convert to a String
+    Option(target).getOrElse("").toString
 }
 
 object AtomicTest {

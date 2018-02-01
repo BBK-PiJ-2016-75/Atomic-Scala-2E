@@ -83,3 +83,5 @@ project/plugins/project/
 project/
 src/main/scala/examples/
 src/main/scala/solutions/
+src/main/resources/
+src/test/
