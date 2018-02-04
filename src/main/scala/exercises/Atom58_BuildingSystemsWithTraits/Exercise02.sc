@@ -12,11 +12,6 @@ class Latte(shots: Shots, caffeine: Caffeine, cup: Cup, milk: Milk) extends Coff
   override def toString: String = s"Latte($shots,$caffeine,$cup,$milk)"
 }
 
-import Caffeine._
-import Cup._
-import Milk._
-import Shots._
-
 object Shots extends Enumeration {
   type Shots = Value
   val Single, Double = Value
@@ -36,5 +31,11 @@ object Milk extends Enumeration {
   type Milk = Value
   val Skim = Value
 }
+
+import Caffeine._
+import Cup._
+import Milk._
+import Shots._
+
 latte is "Latte(Single,Caf,Here,Skim)"
 usual is "Coffee(Double,Caf,Here)"

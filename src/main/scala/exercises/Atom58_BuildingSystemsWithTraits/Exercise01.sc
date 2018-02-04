@@ -33,12 +33,6 @@ object Milk extends Enumeration {
   val Skim, NoMilk = Value
 }
 
-import Caffeine._
-import Cup._
-import Milk._
-import Shots._
-import Syrup._
-
 object Syrup extends Enumeration {
   type Syrup = _Val
   val Choc, NoFlavour = _Val()
@@ -46,6 +40,12 @@ object Syrup extends Enumeration {
   case class _Val() extends Val with Flavour
 
 }
+
+import Caffeine._
+import Cup._
+import Milk._
+import Shots._
+import Syrup._
 
 Coffee(Single, Caf, Here, Skim, Choc) is "Coffee(Single,Caf,Here,Skim,Choc)"
 Coffee(Double, Caf, Here, NoMilk, NoFlavour) is "Coffee(Double,Caf,Here,NoMilk,NoFlavour)"
